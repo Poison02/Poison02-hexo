@@ -5,102 +5,33 @@
     <url>/2023/01/07/Nodejs%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h1 id="一、Node-jS简介"><a href="#一、Node-jS简介" class="headerlink" title="一、Node.jS简介"></a>一、Node.jS简介</h1><p>Node.js是一个运行在V8引擎上的JavaScript的运行环境。原始的JavaScript是运行在浏览器上的，而Node.js使得JavaScript可以运行在浏览器以外的地方。相对于大部分的浏览器语言来说，Node.js采用了单线程，使用异步的方式处理并发问题。</p>
 <h1 id="二、Node-js安装"><a href="#二、Node-js安装" class="headerlink" title="二、Node.js安装"></a>二、Node.js安装</h1><h2 id="1、直接安装（通过安装包）"><a href="#1、直接安装（通过安装包）" class="headerlink" title="1、直接安装（通过安装包）"></a>1、直接安装（通过安装包）</h2><p>这里是Node.js的官网：<a href="https://nodejs.org/en/">https://nodejs.org/en/</a>，进去之后会是下面这个界面：</p>
-<p>  <img src="C:\Users\20698\AppData\Roaming\Typora\typora-user-images\image-20230101231947557.png" alt="image-20230101231947557"></p>
+<p>  <img src="https://img-1315662121.cos.ap-guangzhou.myqcloud.com/img/image-20230101231947557.png" alt="image-20230101231947557"></p>
 <p>前面的是长期维护版，后面的是最新版本，<strong>一般来讲使用前面的版本</strong>。</p>
 <p>直接点击下载之后会得到一个安装包，下载好之后使用管理员打开安装包进行安装即可，一路默认，到选择路径的时候可以选择自定义路径安装，但最好是放在自己能找着的目录；最后一步会是这个样子：</p>
-<p>  <img src="C:\Users\20698\AppData\Roaming\Typora\typora-user-images\image-20230101232226918.png" alt="image-20230101232226918"></p>
+<p>  <img src="https://img-1315662121.cos.ap-guangzhou.myqcloud.com/img/image-20230101232226918.png" alt="image-20230101232226918"></p>
 <p><strong>在这里这个勾可以选也可以不选</strong>，选了之后会下载一些必要的工具，但是后面安装的时候可能会出现网络原因（因为服务器在外国）；当然不选择的话后面也可以自己安装那些工具，这里网络好点的可以勾选。</p>
 <p>检测安装成功与否，只需要打开cmd输入<code>node -v</code>，出现了版本号就是安装成功：</p>
-<p>  <img src="C:\Users\20698\AppData\Roaming\Typora\typora-user-images\image-20230101232609979.png" alt="image-20230101232609979"></p>
+<p>  <img src="https://img-1315662121.cos.ap-guangzhou.myqcloud.com/img/image-20230101232609979.png" alt="image-20230101232609979"></p>
 <h2 id="2、通过nvm安装"><a href="#2、通过nvm安装" class="headerlink" title="2、通过nvm安装"></a>2、通过<strong>nvm</strong>安装</h2><h3 id="（1）安装"><a href="#（1）安装" class="headerlink" title="（1）安装"></a>（1）安装</h3><p>nvm是啥？nvm是一个node版本的管理器，非常方便！</p>
 <p>nvm下载地址：<a href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a>，以windows为例，直接下载最新版。</p>
-<p><img src="C:\Users\20698\AppData\Roaming\Typora\typora-user-images\image-20230101234856428.png" alt="image-20230101234856428"></p>
+<p><img src="https://img-1315662121.cos.ap-guangzhou.myqcloud.com/img/image-20230101234856428.png" alt="image-20230101234856428"></p>
 <p>下载好之后同样也是使用管理员打开，然后一路默认，安装路径那里根据自己需求更改，但最好是放在自己能找着的目录。</p>
 <p>检测安装成功与否，打开cmd输入<code>nvm version</code>，出现版本号即是安装成功</p>
-<p><img src="C:\Users\20698\AppData\Roaming\Typora\typora-user-images\image-20230101235401868.png" alt="image-20230101235401868"></p>
+<p><img src="https://img-1315662121.cos.ap-guangzhou.myqcloud.com/img/image-20230101235401868.png" alt="image-20230101235401868"></p>
 <h3 id="（2）配置国内镜像源"><a href="#（2）配置国内镜像源" class="headerlink" title="（2）配置国内镜像源"></a>（2）配置国内镜像源</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nvm node_mirror https://npmmirror.com/mirrors/node/</span><br></pre></td></tr></table></figure>
 
 <h3 id="（3）安装node"><a href="#（3）安装node" class="headerlink" title="（3）安装node"></a>（3）安装node</h3><h4 id="a、先使用命令查看node列表"><a href="#a、先使用命令查看node列表" class="headerlink" title="a、先使用命令查看node列表"></a>a、先使用命令查看node列表</h4><p>​    <code>node list</code></p>
 <h4 id="b、安装指定版本的node"><a href="#b、安装指定版本的node" class="headerlink" title="b、安装指定版本的node"></a>b、安装指定版本的node</h4><p>​    <code>node install 指定版本号的node</code></p>
 <h4 id="c、使用node"><a href="#c、使用node" class="headerlink" title="c、使用node"></a>c、使用node</h4><p>​    <code>node use 指定版本的node</code></p>
-<h3 id="（4）使用node"><a href="#（4）使用node" class="headerlink" title="（4）使用node"></a>（4）使用node</h3><h4 id="a、新建一个js文件"><a href="#a、新建一个js文件" class="headerlink" title="a、新建一个js文件"></a>a、新建一个js文件</h4><p>​    <img src="C:\Users\20698\AppData\Roaming\Typora\typora-user-images\image-20230102000216342.png" alt="image-20230102000216342"></p>
+<h3 id="（4）使用node"><a href="#（4）使用node" class="headerlink" title="（4）使用node"></a>（4）使用node</h3><h4 id="a、新建一个js文件"><a href="#a、新建一个js文件" class="headerlink" title="a、新建一个js文件"></a>a、新建一个js文件</h4><p>​    <img src="https://img-1315662121.cos.ap-guangzhou.myqcloud.com/img/image-20230102000216342.png" alt="image-20230102000216342"></p>
 <h4 id="b、在该项目目录下打开终端"><a href="#b、在该项目目录下打开终端" class="headerlink" title="b、在该项目目录下打开终端"></a>b、在该项目目录下打开终端</h4><p>​    <strong>备注：在使用前一定要先<code>node use 指定版本号</code>，不然会报错node找不到的！</strong></p>
 <p>​    打开终端后输入 <code>node js文件名</code>即可运行。</p>
-<p>​    <img src="C:\Users\20698\AppData\Roaming\Typora\typora-user-images\image-20230102002146932.png" alt="image-20230102002146932"></p>
+<p>​    <img src="https://img-1315662121.cos.ap-guangzhou.myqcloud.com/img/image-20230102002146932.png" alt="image-20230102002146932"></p>
 <h1 id="三、Node-js和JavaScript的区别"><a href="#三、Node-js和JavaScript的区别" class="headerlink" title="三、Node.js和JavaScript的区别"></a>三、Node.js和JavaScript的区别</h1><p>两个都有ECMAScript标准，但JavaScript中有Dom和Bom，Node.js中没有后面两种。</p>
 ]]></content>
       <categories>
         <category>Node.js</category>
         <category>Node.js安装</category>
-      </categories>
-      <tags>
-        <tag>Node.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/12/15/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>第一篇测试文章</title>
-    <url>/2022/12/15/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="这是一篇测试文章"><a href="#这是一篇测试文章" class="headerlink" title="这是一篇测试文章"></a>这是一篇测试文章</h1><h3 id="单纯就是为了测试好不好用，试了，蛮好用的！"><a href="#单纯就是为了测试好不好用，试了，蛮好用的！" class="headerlink" title="单纯就是为了测试好不好用，试了，蛮好用的！"></a>单纯就是为了测试好不好用，试了，蛮好用的！</h3><p>你干嘛哈哈哎哟，能不能荔枝一点！</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用C语言写一篇二分查找吧那就！</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">binarySearch</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> target)</span>&#123;</span><br><span class="line">    <span class="comment">// 定义一个左指针</span></span><br><span class="line">    left = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 定义一个右指针</span></span><br><span class="line">    right = numsSize - <span class="number">1</span>;</span><br><span class="line">    <span class="comment">// 遍历数组</span></span><br><span class="line">    <span class="keyword">while</span>(left &lt;= right)&#123;</span><br><span class="line">        <span class="comment">// 定义一个中间指针,下面这样的操作是为了防止int溢出！</span></span><br><span class="line">        <span class="type">int</span> middle = left + (right - left &gt;&gt; <span class="number">1</span>);</span><br><span class="line">        <span class="comment">// 如果说目标值小于中间值</span></span><br><span class="line">        <span class="keyword">if</span> (nums[middle] &gt; target)&#123;</span><br><span class="line">            <span class="comment">// 那么就移动右指针</span></span><br><span class="line">            right = middle - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 目标值大于中间值</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nums[middle] &lt; target)&#123;</span><br><span class="line">            <span class="comment">//移动左指针</span></span><br><span class="line">            left = middle + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">// 否则返回中间指针</span></span><br><span class="line">            <span class="keyword">return</span> middle;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 如果找不到就返回-1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>好了，本期教程到此结束！测试文章结束啦！:dart:</p>
-<h4 id=""><a href="#" class="headerlink" title=""></a></h4>]]></content>
-      <tags>
-        <tag>测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>同步和异步</title>
-    <url>/2023/01/10/%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5/</url>
-    <content><![CDATA[<h1 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h1><h2 id="前言：进程和线程"><a href="#前言：进程和线程" class="headerlink" title="前言：进程和线程"></a>前言：进程和线程</h2><h3 id="1）进程"><a href="#1）进程" class="headerlink" title="1）进程"></a>1）进程</h3><p>类似程序运行的环境。比如一个工厂。</p>
-<h3 id="2）线程"><a href="#2）线程" class="headerlink" title="2）线程"></a>2）线程</h3><p>线城市实际进行运算的东西。比如一个工厂里面的工人。</p>
-<h2 id="一、同步"><a href="#一、同步" class="headerlink" title="一、同步"></a>一、同步</h2><p>通常情况下代码都是自上向下一行一行执行的。</p>
-<p>同步就是后边的必须<strong>等待</strong>前边的完成才会继续。举个例子就是去餐厅点菜，用同步来说点完菜之后就一直等着上菜，什么都不做。</p>
-<p>前边代码不执行，后面代码就不会执行，同步的代码执行会出现<strong>阻塞</strong>的情况。</p>
-<p>一行代码执行慢会影响到整个程序的执行。</p>
-<p>举个例子</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">a, b</span>)&#123;</span><br><span class="line">	<span class="keyword">const</span> begin <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="comment">// 这里相当于是while循环需要执行10秒钟</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="title class_">Date</span>.<span class="title function_">now</span>() - begin &lt; <span class="number">10000</span>)&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;111&quot;</span>);</span><br><span class="line"><span class="comment">// 这里调用sum函数就会等待函数里面的while循环结束才会返回结果。程序在这里就造成了阻塞。</span></span><br><span class="line"><span class="keyword">const</span> result = <span class="title function_">sum</span>(<span class="number">123</span>, <span class="number">456</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;222&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>解决同步阻塞：<strong>异步</strong></p>
-<h2 id="二、异步"><a href="#二、异步" class="headerlink" title="二、异步"></a>二、异步</h2><p>异步不需要<strong>等待</strong>。也就是说点完菜之后，去玩手机，不需要只等着菜。一段代码的执行不会影响到其他程序的运行。</p>
-<p>举个例子</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">a, b</span>)&#123;</span><br><span class="line">	<span class="keyword">const</span> begin <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="comment">// 使用setTimeout实现异步。但是同时会出现问题，最后得到undefined。</span></span><br><span class="line">    <span class="title function_">setTimaout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;, <span class="number">10000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;111&quot;</span>);</span><br><span class="line"><span class="comment">// 这里因为使用的setTimeout，所以会返回undefined。</span></span><br><span class="line"><span class="keyword">const</span> result = <span class="title function_">sum</span>(<span class="number">123</span>, <span class="number">456</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;222&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>上边异步出现问题，异步的代码无法通过return得到</p>
-<p>我们这里使用<strong>回调函数</strong>解决</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">a, b, callback</span>)&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="title function_">callback</span>(a + b);</span><br><span class="line">    &#125;, <span class="number">10000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;111&quot;</span>);</span><br><span class="line"><span class="title function_">sum</span>(<span class="number">123</span>, <span class="number">456</span>, <span class="function">(<span class="params">result</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;222&quot;</span>);</span><br><span class="line"><span class="comment">// 结果是先返回111和222，间隔10秒返回result的值579.</span></span><br></pre></td></tr></table></figure>
-
-<p>异步的特点：不会阻塞，通过回调函数。</p>
-<p>但是此时又有一个新的问题：<strong>“死亡金字塔”</strong></p>
-<p>意思就是说在回调函数中再次调用函数，…，以此类推，无限套娃。</p>
-<p>基于回调函数的异步带来的问题</p>
-<p>​	1、代码的可读性差</p>
-<p>​	2、可调试性差</p>
-<p>此时需要一个东西可以代替回调函数解决这个问题，返回结果</p>
-<p>引出—<strong>Promise</strong></p>
-<p>​								- Promise是一个用来存储数据的对象。存储方式特殊，可以用来存储异步调用的数据。下一章详细介绍Promise。</p>
-]]></content>
-      <categories>
-        <category>Node.js</category>
-        <category>同步和异步</category>
       </categories>
       <tags>
         <tag>Node.js</tag>
@@ -314,6 +245,75 @@
       <tags>
         <tag>Python</tag>
         <tag>Python数据类型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/12/15/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>同步和异步</title>
+    <url>/2023/01/10/%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5/</url>
+    <content><![CDATA[<h1 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h1><h2 id="前言：进程和线程"><a href="#前言：进程和线程" class="headerlink" title="前言：进程和线程"></a>前言：进程和线程</h2><h3 id="1）进程"><a href="#1）进程" class="headerlink" title="1）进程"></a>1）进程</h3><p>类似程序运行的环境。比如一个工厂。</p>
+<h3 id="2）线程"><a href="#2）线程" class="headerlink" title="2）线程"></a>2）线程</h3><p>线城市实际进行运算的东西。比如一个工厂里面的工人。</p>
+<h2 id="一、同步"><a href="#一、同步" class="headerlink" title="一、同步"></a>一、同步</h2><p>通常情况下代码都是自上向下一行一行执行的。</p>
+<p>同步就是后边的必须<strong>等待</strong>前边的完成才会继续。举个例子就是去餐厅点菜，用同步来说点完菜之后就一直等着上菜，什么都不做。</p>
+<p>前边代码不执行，后面代码就不会执行，同步的代码执行会出现<strong>阻塞</strong>的情况。</p>
+<p>一行代码执行慢会影响到整个程序的执行。</p>
+<p>举个例子</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">a, b</span>)&#123;</span><br><span class="line">	<span class="keyword">const</span> begin <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="comment">// 这里相当于是while循环需要执行10秒钟</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="title class_">Date</span>.<span class="title function_">now</span>() - begin &lt; <span class="number">10000</span>)&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;111&quot;</span>);</span><br><span class="line"><span class="comment">// 这里调用sum函数就会等待函数里面的while循环结束才会返回结果。程序在这里就造成了阻塞。</span></span><br><span class="line"><span class="keyword">const</span> result = <span class="title function_">sum</span>(<span class="number">123</span>, <span class="number">456</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;222&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>解决同步阻塞：<strong>异步</strong></p>
+<h2 id="二、异步"><a href="#二、异步" class="headerlink" title="二、异步"></a>二、异步</h2><p>异步不需要<strong>等待</strong>。也就是说点完菜之后，去玩手机，不需要只等着菜。一段代码的执行不会影响到其他程序的运行。</p>
+<p>举个例子</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">a, b</span>)&#123;</span><br><span class="line">	<span class="keyword">const</span> begin <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">    <span class="comment">// 使用setTimeout实现异步。但是同时会出现问题，最后得到undefined。</span></span><br><span class="line">    <span class="title function_">setTimaout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;, <span class="number">10000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;111&quot;</span>);</span><br><span class="line"><span class="comment">// 这里因为使用的setTimeout，所以会返回undefined。</span></span><br><span class="line"><span class="keyword">const</span> result = <span class="title function_">sum</span>(<span class="number">123</span>, <span class="number">456</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;222&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>上边异步出现问题，异步的代码无法通过return得到</p>
+<p>我们这里使用<strong>回调函数</strong>解决</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">a, b, callback</span>)&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="title function_">callback</span>(a + b);</span><br><span class="line">    &#125;, <span class="number">10000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;111&quot;</span>);</span><br><span class="line"><span class="title function_">sum</span>(<span class="number">123</span>, <span class="number">456</span>, <span class="function">(<span class="params">result</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;222&quot;</span>);</span><br><span class="line"><span class="comment">// 结果是先返回111和222，间隔10秒返回result的值579.</span></span><br></pre></td></tr></table></figure>
+
+<p>异步的特点：不会阻塞，通过回调函数。</p>
+<p>但是此时又有一个新的问题：<strong>“死亡金字塔”</strong></p>
+<p>意思就是说在回调函数中再次调用函数，…，以此类推，无限套娃。</p>
+<p>基于回调函数的异步带来的问题</p>
+<p>​	1、代码的可读性差</p>
+<p>​	2、可调试性差</p>
+<p>此时需要一个东西可以代替回调函数解决这个问题，返回结果</p>
+<p>引出—<strong>Promise</strong></p>
+<p>​								- Promise是一个用来存储数据的对象。存储方式特殊，可以用来存储异步调用的数据。下一章详细介绍Promise。</p>
+]]></content>
+      <categories>
+        <category>Node.js</category>
+        <category>同步和异步</category>
+      </categories>
+      <tags>
+        <tag>Node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第一篇测试文章</title>
+    <url>/2022/12/15/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="这是一篇测试文章"><a href="#这是一篇测试文章" class="headerlink" title="这是一篇测试文章"></a>这是一篇测试文章</h1><h3 id="单纯就是为了测试好不好用，试了，蛮好用的！"><a href="#单纯就是为了测试好不好用，试了，蛮好用的！" class="headerlink" title="单纯就是为了测试好不好用，试了，蛮好用的！"></a>单纯就是为了测试好不好用，试了，蛮好用的！</h3><p>你干嘛哈哈哎哟，能不能荔枝一点！</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 使用C语言写一篇二分查找吧那就！</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">binarySearch</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> target)</span>&#123;</span><br><span class="line">    <span class="comment">// 定义一个左指针</span></span><br><span class="line">    left = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 定义一个右指针</span></span><br><span class="line">    right = numsSize - <span class="number">1</span>;</span><br><span class="line">    <span class="comment">// 遍历数组</span></span><br><span class="line">    <span class="keyword">while</span>(left &lt;= right)&#123;</span><br><span class="line">        <span class="comment">// 定义一个中间指针,下面这样的操作是为了防止int溢出！</span></span><br><span class="line">        <span class="type">int</span> middle = left + (right - left &gt;&gt; <span class="number">1</span>);</span><br><span class="line">        <span class="comment">// 如果说目标值小于中间值</span></span><br><span class="line">        <span class="keyword">if</span> (nums[middle] &gt; target)&#123;</span><br><span class="line">            <span class="comment">// 那么就移动右指针</span></span><br><span class="line">            right = middle - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 目标值大于中间值</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nums[middle] &lt; target)&#123;</span><br><span class="line">            <span class="comment">//移动左指针</span></span><br><span class="line">            left = middle + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">// 否则返回中间指针</span></span><br><span class="line">            <span class="keyword">return</span> middle;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 如果找不到就返回-1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>好了，本期教程到此结束！测试文章结束啦！:dart:</p>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4>]]></content>
+      <tags>
+        <tag>测试</tag>
       </tags>
   </entry>
 </search>

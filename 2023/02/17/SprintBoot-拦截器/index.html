@@ -19,22 +19,23 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="gogogo">
-    <meta name="description" content="gogogo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="https://poison02.github.io/about/index.html">
+    <meta name="description" content="SpringBoot-拦截器拦截器相信不会陌生，就是比如说我们在一些主页面等页面通过 url 去访问本来是不应该被访问的（如果没有登录的话），这时候我们就需要用拦截器去拦截这个请求。 我们通过下面两个操作实现拦截器 1、新建一个interceptor包，写一个登录拦截的类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SprintBoot-拦截器">
+<meta property="og:url" content="https://poison02.github.io/2023/02/17/SprintBoot-%E6%8B%A6%E6%88%AA%E5%99%A8/index.html">
 <meta property="og:site_name" content="Zch">
-<meta property="og:description" content="gogogo">
+<meta property="og:description" content="SpringBoot-拦截器拦截器相信不会陌生，就是比如说我们在一些主页面等页面通过 url 去访问本来是不应该被访问的（如果没有登录的话），这时候我们就需要用拦截器去拦截这个请求。 我们通过下面两个操作实现拦截器 1、新建一个interceptor包，写一个登录拦截的类">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-12-17T13:45:36.000Z">
-<meta property="article:modified_time" content="2022-12-17T13:45:36.372Z">
+<meta property="article:published_time" content="2023-02-17T12:42:17.000Z">
+<meta property="article:modified_time" content="2023-02-17T12:45:49.768Z">
 <meta property="article:author" content="Zch ch">
+<meta property="article:tag" content="SpringBoot">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>about · Poison02&#39;s Blog.</title>
+    <title>SprintBoot-拦截器 · Poison02&#39;s Blog.</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -222,6 +223,8 @@
         }
     </script>
     
+        <body class="post-body">
+    
         <!-- header -->
         <header class="header header-mobile">
     <!-- top read progress line -->
@@ -251,6 +254,17 @@
     </div>
     <!-- toggle banner for post layout -->
     
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">Poison02&#39;s Blog.</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">SprintBoot-拦截器</a>
+            </div>
+        </div>
+    
 </header>
 
         <!-- fixed footer -->
@@ -277,24 +291,80 @@
 
 
 
+    height:50vh;
+
 ">
     
     <!-- 主页  -->
     
+        
+    <!-- 404页  -->
+    
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+                SprintBoot-拦截器
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+                
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="SpringBoot">SpringBoot</a>
+    
+</div>
+
+                
+                <!-- 文章字数统计 -->
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">303</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2023/02/17</span>
+                    <!-- busuanzi -->
+                    
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -426,15 +496,27 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        
+        <h1 id="SpringBoot-拦截器"><a href="#SpringBoot-拦截器" class="headerlink" title="SpringBoot-拦截器"></a>SpringBoot-拦截器</h1><p>拦截器相信不会陌生，就是比如说我们在一些主页面等页面通过 url 去访问本来是不应该被访问的（如果没有登录的话），这时候我们就需要用拦截器去拦截这个请求。</p>
+<p>我们通过下面两个操作实现拦截器</p>
+<p>1、新建一个<code>interceptor</code>包，写一个登录拦截的类</p>
+<p><code>LoginInterceptor</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 登录拦截器</span></span><br><span class="line"><span class="comment"> * HandlerInterceptor</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LoginInterceptor</span> <span class="keyword">implements</span> <span class="title class_">HandlerInterceptor</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * preHandle 添加判定规则</span></span><br><span class="line"><span class="comment">     * */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">preHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (<span class="literal">null</span> == request.getSession().getAttribute(<span class="string">&quot;username&quot;</span>))&#123;</span><br><span class="line">            response.sendRedirect(<span class="string">&quot;/Login.html&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2、通过全局配置去配置拦截器</p>
+<p>新建一个<code>config</code>包，创建一个类</p>
+<p><code>InterceptorConfigurer</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span> <span class="comment">// 系统配置注解</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">InterceptorConfigurer</span> <span class="keyword">implements</span> <span class="title class_">WebMvcConfigurer</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addInterceptors</span><span class="params">(InterceptorRegistry registry)</span> &#123;</span><br><span class="line">        <span class="type">HandlerInterceptor</span> <span class="variable">hI</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">LoginInterceptor</span>();</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 加白名单，有些资源不做拦截</span></span><br><span class="line"><span class="comment">         * */</span></span><br><span class="line">        <span class="type">ArrayList</span> <span class="variable">list</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        list.add(<span class="string">&quot;/Register.html&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;/Login.html&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;/login&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;/register&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;/img/*&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 添加拦截器, 并在此基础上添加不被拦截的白名单集合</span></span><br><span class="line">        registry.addInterceptor(hI).excludePathPatterns(list);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以上操作就可以实现一个简单的登录拦截器。</p>
+
     </article>
     <!-- license -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="https://Poison02.github.io">Zch ch</a>
-            <p>原文链接：<a href="https://poison02.github.io/about/index.html">https://poison02.github.io/about/index.html</a>
-            <p>发表日期：<a href="https://poison02.github.io/about/index.html">December 17th 2022, 9:45:36 pm</a>
-            <p>更新日期：<a href="https://poison02.github.io/about/index.html">December 17th 2022, 9:45:36 pm</a>
+            <p>原文链接：<a href="https://poison02.github.io/2023/02/17/SprintBoot-%E6%8B%A6%E6%88%AA%E5%99%A8/">https://poison02.github.io/2023/02/17/SprintBoot-%E6%8B%A6%E6%88%AA%E5%99%A8/</a>
+            <p>发表日期：<a href="https://poison02.github.io/2023/02/17/SprintBoot-%E6%8B%A6%E6%88%AA%E5%99%A8/">February 17th 2023, 8:42:17 pm</a>
+            <p>更新日期：<a href="https://poison02.github.io/2023/02/17/SprintBoot-%E6%8B%A6%E6%88%AA%E5%99%A8/">February 17th 2023, 8:45:49 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -442,8 +524,18 @@
     <ul class="post-paginator">
         <li class="next">
             
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2023/02/17/SprintBoot-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" title="SprintBoot-文件上传">
+                    <div class="nextTitle">SprintBoot-文件上传</div>
+                </a>
+            
         </li>
         <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2023/02/13/SpringBoot-Start/" title="SpringBoot-Start">
+                    <div class="prevTitle">SpringBoot-Start</div>
+                </a>
             
         </li>
     </ul>
@@ -582,6 +674,23 @@
 
         </div>
         <!-- toc -->
+        
+            <div class="toc-wrapper toc-wrapper-loding" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SpringBoot-%E6%8B%A6%E6%88%AA%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">SpringBoot-拦截器</span></a></li></ol>
+            </div>
         
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
@@ -878,6 +987,8 @@
         <!-- CNZZ -->
         
         <!-- async load share.js -->
+        
+            <script src="/scripts/share.js?v=20211217" async></script>
         
         <!-- mermaid -->
         

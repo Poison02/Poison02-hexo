@@ -447,6 +447,97 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/02/17/SprintBoot-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">
+                
+                <span class="abstract-title-text">SprintBoot-文件上传</span>
+            </a>
+            <div class="abstract-content">
+                <h1 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h1><p>首先，要规定好文件上传的大小和文件上传的类型，这里我们就用两个常量去定义, 这里写在controller层，也可以自己封装类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="type">final</span> <span class="variable">AVATAR_MAX_SIZE</span> <span class="operator">=</span> <span class="number">101</span> * <span class="number">1024</span>; <span class="comment">// 这里我就定义100kb</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> ArrayList&lt;String&gt; AVATAR_TYPE = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(); <span class="comment">// 这里使用数组存储</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 这里写一个静态块，SpringBoot扫描到就会自动执行</span></span><br><span class="line"><span class="keyword">static</span>&#123;</span><br><span class="line">    AVATAR_TYPE.add(<span class="string">&quot;image/jpg&quot;</span>);</span><br><span class="line">    AVATAR_TYPE.add(<span class="string">&quot;image/gif&quot;</span>);</span><br><span class="line">    AVATAR_TYPE.add(<span class="string">&quot;image/jpeg&quot;</span>);</span><br><span class="line">    AVATAR_TYPE.add(<span class="string">&quot;image/png&quot;</span>);</span><br><span class="line">    AVATAR_TYPE.add(<span class="string">&quot;image/webg&quot;</span>);</span><br><span class="line">&#125; <span class="comment">// 暂且就规定这五种类型的图片</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="mapper"><a href="#mapper" class="headerlink" title="mapper"></a>mapper</h2>
+            </div>
+            <!-- read more -->
+            
+                <div class="abstract-read-more-button">
+                    <a href="/2023/02/17/SprintBoot-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">
+                        <span style="margin-right: 0.2rem;">阅读全文</span>
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/02/17">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/02/17</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="SpringBoot">SpringBoot</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/2023/02/17/SprintBoot-%E6%8B%A6%E6%88%AA%E5%99%A8/">
+                
+                <span class="abstract-title-text">SprintBoot-拦截器</span>
+            </a>
+            <div class="abstract-content">
+                <h1 id="SpringBoot-拦截器"><a href="#SpringBoot-拦截器" class="headerlink" title="SpringBoot-拦截器"></a>SpringBoot-拦截器</h1><p>拦截器相信不会陌生，就是比如说我们在一些主页面等页面通过 url 去访问本来是不应该被访问的（如果没有登录的话），这时候我们就需要用拦截器去拦截这个请求。</p>
+<p>我们通过下面两个操作实现拦截器</p>
+<p>1、新建一个<code>interceptor</code>包，写一个登录拦截的类</p>
+            </div>
+            <!-- read more -->
+            
+                <div class="abstract-read-more-button">
+                    <a href="/2023/02/17/SprintBoot-%E6%8B%A6%E6%88%AA%E5%99%A8/">
+                        <span style="margin-right: 0.2rem;">阅读全文</span>
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                </div>
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/02/17">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/02/17</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="SpringBoot">SpringBoot</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/02/13/SpringBoot-Start/">
                 
                 <span class="abstract-title-text">SpringBoot-Start</span>
@@ -920,7 +1011,31 @@
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -947,7 +1062,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 6
+        Total : 8
         </div>
         <!-- search  -->
         
@@ -961,6 +1076,18 @@
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/17</span>
+            <a class="archive-post-title" href="/2023/02/17/SprintBoot-%E6%8B%A6%E6%88%AA%E5%99%A8/">SprintBoot-拦截器</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/17</span>
+            <a class="archive-post-title" href="/2023/02/17/SprintBoot-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">SprintBoot-文件上传</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">02/13</span>
@@ -1017,11 +1144,6 @@
                 Node.js
             </span>
         
-            <span class="sidebar-tag-name" data-tags="SpringBoot">
-                <span class="iconfont-archer">&#xe606;</span>
-                SpringBoot
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="Python">
                 <span class="iconfont-archer">&#xe606;</span>
                 Python
@@ -1030,6 +1152,11 @@
             <span class="sidebar-tag-name" data-tags="Python数据类型">
                 <span class="iconfont-archer">&#xe606;</span>
                 Python数据类型
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="SpringBoot">
+                <span class="iconfont-archer">&#xe606;</span>
+                SpringBoot
             </span>
         
             <span class="sidebar-tag-name" data-tags="测试">
@@ -1053,19 +1180,14 @@
             Node.js
         </span>
     
-        <span class="sidebar-category-name" data-categories="SpringBoot">
-            <span class="iconfont-archer">&#xe60a;</span>
-            SpringBoot
-        </span>
-    
         <span class="sidebar-category-name" data-categories="Python">
             <span class="iconfont-archer">&#xe60a;</span>
             Python
         </span>
     
-        <span class="sidebar-category-name" data-categories="同步和异步">
+        <span class="sidebar-category-name" data-categories="SpringBoot">
             <span class="iconfont-archer">&#xe60a;</span>
-            同步和异步
+            SpringBoot
         </span>
     
         <span class="sidebar-category-name" data-categories="Node.js安装">
@@ -1073,14 +1195,29 @@
             Node.js安装
         </span>
     
+        <span class="sidebar-category-name" data-categories="Python基础">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Python基础
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="同步和异步">
+            <span class="iconfont-archer">&#xe60a;</span>
+            同步和异步
+        </span>
+    
         <span class="sidebar-category-name" data-categories="SpringBoot基础">
             <span class="iconfont-archer">&#xe60a;</span>
             SpringBoot基础
         </span>
     
-        <span class="sidebar-category-name" data-categories="Python基础">
+        <span class="sidebar-category-name" data-categories="SpringBoot-拦截器">
             <span class="iconfont-archer">&#xe60a;</span>
-            Python基础
+            SpringBoot-拦截器
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="SpringBoot-文件上传">
+            <span class="iconfont-archer">&#xe60a;</span>
+            SpringBoot-文件上传
         </span>
     
         <span class="sidebar-category-name" data-categories="Python数据类型">
